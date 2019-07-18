@@ -16,7 +16,7 @@ source:
 
 build:
   noarch: generic
-  number: 2001
+  number: 2002
 
   rpaths:
     - lib/R/lib/
@@ -37,6 +37,7 @@ test:
 about:
   home: https://github.com/nalimilan/R2HTML
   license: GPL (>= 2)
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
   summary: Includes HTML function and methods to write in an HTML file. Thus, making HTML reports
     is easy. Includes a function that allows redirection on the fly, which appears to
     be very useful for teaching purpose, as the student can keep a copy of the produced
@@ -48,8 +49,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - dpryan79
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
+    - conda-forge/r
