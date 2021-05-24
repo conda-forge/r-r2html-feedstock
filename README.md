@@ -5,11 +5,9 @@ Home: https://github.com/nalimilan/R2HTML
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-r2html-feedstock/blob/master/LICENSE.txt)
 
 Summary: Includes HTML function and methods to write in an HTML file. Thus, making HTML reports is easy. Includes a function that allows redirection on the fly, which appears to be very useful for teaching purpose, as the student can keep a copy of the produced output to keep all that he did during the course. Package comes with a vignette describing how to write HTML reports for statistical analysis. Finally, a driver for 'Sweave' allows to parse HTML flat files containing R code and to automatically write the corresponding outputs (tables and graphs).
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-r2html` from the `conda-forge` channel can be achieved by adding `
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-r2html` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
