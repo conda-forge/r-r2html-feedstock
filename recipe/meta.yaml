@@ -1,4 +1,4 @@
-{% set version = '2.3.2' %}
+{% set version = "2.3.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/R2HTML_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/R2HTML/R2HTML_{{ version }}.tar.gz
-  sha256: 69c6fd9942de00747fcd6ba317a4e8bdbd37403b130fc3a7c8494b058fb77d02
+  sha256: 4a7e181a1c444f83ccac7eb8b19962de08dd649ae5b9868813d008196e4e0f8b
 
 build:
   noarch: generic
-  number: 2003
+  number: 0
 
   rpaths:
     - lib/R/lib/
@@ -37,14 +37,9 @@ test:
 about:
   home: https://github.com/nalimilan/R2HTML
   license: GPL (>= 2)
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
-  summary: Includes HTML function and methods to write in an HTML file. Thus, making HTML reports
-    is easy. Includes a function that allows redirection on the fly, which appears to
-    be very useful for teaching purpose, as the student can keep a copy of the produced
-    output to keep all that he did during the course. Package comes with a vignette
-    describing how to write HTML reports for statistical analysis. Finally, a driver
-    for 'Sweave' allows to parse HTML flat files containing R code and to automatically
-    write the corresponding outputs (tables and graphs).
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  summary: Includes HTML function and methods to write in an HTML file. Thus, making HTML reports is easy. Includes a function that allows redirection on the fly, which appears to be very useful for teaching purpose, as the student can keep a copy of the produced output to keep all that he did during the course. Package
+    comes with a vignette describing how to write HTML reports for statistical analysis. Finally, a driver for 'Sweave' allows to parse HTML flat files containing R code and to automatically write the corresponding outputs (tables and graphs).
   license_family: GPL3
 
 extra:
